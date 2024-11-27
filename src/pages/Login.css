@@ -1,3 +1,6 @@
+html {
+    background-color: rgb(202, 139, 1);
+}
 
 .login-container {
     max-width: 400px;
@@ -5,7 +8,8 @@
     padding: 40px;
     border: 1px solid #ddd;
     border-radius: 15px;
-    background-color: #f9f9f9;
+    background-image: linear-gradient(to top right, #223c78, #2278ba);
+    border: 2px solid #d7335d;
   }
   
   .login-container h2 {
@@ -21,4 +25,11 @@
     background-color: #007bff;
     color: white;
   }
+
+  label {
+    font-weight: bold;
+  }
   
+  .form-control {
+    border: 1px solid #930af5;
+  }

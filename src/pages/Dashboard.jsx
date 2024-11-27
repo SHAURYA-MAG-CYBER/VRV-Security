@@ -5,7 +5,7 @@ import AddEditUserModal from '../components/UserManagement/AddEditUserModal';
 import RoleList from '../components/RoleManagement/RoleList';
 import AddEditRoleModal from '../components/RoleManagement/AddEditRoleModal';
 
-const Dashboard = () => {
+const Dashboard = ({currentUser, onLogout}) => {
   // User Management
   const [users, setUsers] = useState([]);
   const [showUserModal, setShowUserModal] = useState(false);
@@ -82,6 +82,7 @@ const Dashboard = () => {
 
       <UserList
         users={users}
+        currentUser={currentUser}
         handleEditUser={handleEditUser}
         handleDeleteUser={handleDeleteUser}
       />
