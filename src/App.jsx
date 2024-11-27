@@ -6,14 +6,19 @@ import Login from './pages/Login';
 
 const App = () => {
 
-  const [currentUser, setCurrentUser] = useState(null); // State to manage logged-in user
+  const [currentUser, setCurrentUser] = useState(() => {
+    const savedUser = localStorage.getItem('currentUser');
+    return savedUser ? JSON.parse(savedUser) : null;
+  }); 
 
   const handleLogin = (user) => {
-    setCurrentUser(user); // Set the logged-in user
+    setCurrentUser(user);
+    localStorage.setItem('currentUser', JSON.stringify(user));
   };
 
   const handleLogout = () => {
-    setCurrentUser(null); // Clear the logged-in user
+    setCurrentUser(null); 
+    localStorage.removeItem('currentUser');
   };
 
   return (
@@ -24,7 +29,7 @@ const App = () => {
           path="/login"
           element={
             currentUser ? (
-              <Navigate to="/" replace /> // Redirect to Dashboard if already logged in
+              <Navigate to="/" replace /> 
             ) : (
               <Login onLogin={handleLogin} />
             )

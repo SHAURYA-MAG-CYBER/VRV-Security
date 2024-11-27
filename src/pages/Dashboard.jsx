@@ -5,6 +5,7 @@ import AddEditUserModal from '../components/UserManagement/AddEditUserModal';
 import RoleList from '../components/RoleManagement/RoleList';
 import AddEditRoleModal from '../components/RoleManagement/AddEditRoleModal';
 
+// eslint-disable-next-line react/prop-types
 const Dashboard = ({currentUser, onLogout}) => {
   // User Management
   const [users, setUsers] = useState([]);
@@ -112,6 +113,9 @@ const Dashboard = ({currentUser, onLogout}) => {
         role={selectedRole}
         handleSaveRole={handleSaveRole}
       />
+      <button onClick={onLogout} className="btn btn-secondary">
+        Logout
+      </button>
     </div>
   );
 };

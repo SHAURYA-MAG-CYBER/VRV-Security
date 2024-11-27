@@ -1,0 +1,160 @@
+Here’s a well-structured and detailed README file for the project:
+
+---
+
+# **Role-Based Access Control (RBAC) Dashboard**
+
+## **Project Description**
+
+This project is a Role-Based Access Control (RBAC) dashboard that allows administrators to manage users, roles, and permissions effectively. The application demonstrates CRUD operations for roles and users, with dynamic permission-based access control. 
+
+The RBAC dashboard includes the following features:
+- **User Authentication**: Login functionality with predefined users and their roles.
+- **Role Management**: Add, edit, view, and delete roles with specific permissions (Read, Write, Delete).
+- **User Management**: Add, edit, view, and delete users and assign roles dynamically.
+- **Permission Control**: Users are restricted to actions based on their assigned roles and permissions.
+
+---
+
+## **Tech Stack**
+
+The project uses the following technologies:
+- **Frontend Framework**: [React.js](https://reactjs.org/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **CSS Framework**: [Bootstrap](https://getbootstrap.com/)
+- **React Router**: For routing between the login page and the dashboard.
+- **JavaScript**: For logic and functionality.
+- **Mock Data**: User and role information is stored in mock data files.
+
+---
+
+## **Features**
+
+### 1. **Login Page**
+- Admin, Editor, and Checker accounts are pre-configured.
+- Credentials:
+  - **Admin**: Username: `admin`, Password: `admin123` (All permissions)
+  - **Editor**: Username: `editor`, Password: `editor123` (Read and Write permissions)
+  - **Checker**: Username: `checker`, Password: `checker123` (Read-only permission)
+- Error handling for incorrect credentials.
+
+### 2. **Role Management**
+- Manage roles by adding, editing, or deleting them.
+- Assign permissions (Read, Write, Delete) to roles.
+- Displays a list of all roles in a table format.
+
+### 3. **User Management**
+- Manage users by adding, editing, or deleting them.
+- Assign roles to users dynamically.
+- Displays a list of all users in a table format.
+
+### 4. **Permission-Based Access**
+- Users can only perform actions allowed by their assigned permissions.
+  - **Read-only**: Can view data but cannot edit or delete.
+  - **Read and Write**: Can view and modify data but cannot delete.
+  - **Full Access**: Can view, modify, and delete data.
+
+---
+
+## **How to Run This Project Locally**
+
+### **Prerequisites**
+- Node.js and npm installed on your system. Download from [Node.js](https://nodejs.org/).
+
+### **Steps to Run**
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/yourusername/rbac-dashboard.git
+   cd rbac-dashboard
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the Development Server**
+   ```bash
+   npm run dev
+   ```
+   The application will start at `http://localhost:5173`.
+
+4. **Build for Production**
+   To create a production-ready build:
+   ```bash
+   npm run build
+   ```
+
+5. **Preview Production Build**
+   ```bash
+   npm run preview
+   ```
+
+---
+
+## **How the Role List Works**
+- The **Role List** displays all roles with their names and assigned permissions.
+- You can:
+  - **Add a Role**: Click the "Add Role" button to open a modal, fill in the role details, and save.
+  - **Edit a Role**: Click the "Edit" button next to a role to modify its details in a modal.
+  - **Delete a Role**: Click the "Delete" button next to a role to remove it.
+
+---
+
+## **How the User List Works**
+- The **User List** displays all users with their names, assigned roles, and actions.
+- You can:
+  - **Add a User**: Click the "Add User" button to open a modal, fill in user details, assign a role, and save.
+  - **Edit a User**: Click the "Edit" button next to a user to modify their details in a modal.
+  - **Delete a User**: Click the "Delete" button next to a user to remove them.
+
+---
+
+## **Project Folder Structure**
+```plaintext
+src/
+  ├── components/
+  │   ├── RoleManagement/
+  │   │   ├── AddEditRoleModal.jsx
+  │   │   ├── RoleList.jsx
+  │   ├── UserManagement/
+  │   │   ├── AddEditUserModal.jsx
+  │   │   ├── UserList.jsx
+  │   ├── config/
+  │   │   ├── permission.js
+  │   ├── data/
+  │   │   ├── Mockdata.js
+  │   │   ├── UserLogin.js
+  │   ├── styles/
+  │   │   ├── global.css
+  │   ├── utils/
+  │   │   ├── checkPermission.js
+  ├── pages/
+  │   ├── Dashboard.jsx
+  │   ├── Login.jsx
+  │   ├── Login.css
+  ├── App.jsx
+  ├── main.jsx
+```
+
+---
+
+## **Future Improvements**
+- Connect with a backend to manage users and roles dynamically.
+- Implement authentication and authorization using JWT.
+- Add dark mode and theme customization.
+
+---
+
+## **Contributing**
+Feel free to fork the repository and submit pull requests. Contributions are welcome!
+
+---
+
+## **License**
+This project is licensed under the MIT License.
+
+---
+
+Let me know if you'd like to customize this README further!
