@@ -1,0 +1,29 @@
+.close {
+    margin-left: auto;
+    border-radius: 40px;
+    color: black;
+}
+
+.close:hover {
+    background-color: rgb(199, 45, 21);
+}
+
+.modal-footer {
+    height: auto;
+}
+
+.btn-list {
+    margin-left: 10px;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    border-width: 1px;
+}
+
+.btn-warning {
+    background-color: yellow;
+}
+
+.btn-danger {
+    background-color: red;
+}

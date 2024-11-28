@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';  // Import PropTypes
-import '../../styles/global.css';
+import './user.css';
 import { hasPermission } from '../../utils/checkPermission';
 import { PERMISSIONS } from '../../config/permission';
 
@@ -50,12 +50,12 @@ const UserList = ({ users, currentUser={}, handleEditUser, handleDeleteUser }) =
               <td>{user.status}</td>
               <td>
                 {hasPermission(currentUser.roles, PERMISSIONS.WRITE) && ( // Check Edit permission
-                  <button className="btn btn-warning btn-sm mr-2" onClick={() => handleEditUser(user)}>
+                  <button className="btn-list btn-warning btn-sm mr-2" onClick={() => handleEditUser(user)}>
                     Edit
                   </button>
                 )}
                 {hasPermission(currentUser.roles, PERMISSIONS.DELETE) && ( // Check Delete permission
-                  <button className="btn btn-danger btn-sm" onClick={() => handleDeleteUser(user.id)}>
+                  <button className="btn-list btn-danger btn-sm ml-2" onClick={() => handleDeleteUser(user.id)}>
                     Delete
                   </button>
                 )}

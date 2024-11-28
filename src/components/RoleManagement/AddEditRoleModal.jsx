@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import './role.css'
 
 const AddEditRoleModal = ({ showModal, setShowModal, role, handleSaveRole }) => {
   const [roleName, setRoleName] = useState('');
@@ -45,24 +46,24 @@ const AddEditRoleModal = ({ showModal, setShowModal, role, handleSaveRole }) => 
                 placeholder="Role Name"
               />
               <div className="mt-3">
-                <label>
-                  <input
+                <label className="label-pos">
+                  <input className="checkbox-pos"
                     type="checkbox"
                     checked={permissions.read}
                     onChange={() => setPermissions({ ...permissions, read: !permissions.read })}
                   />
                   Read
                 </label>
-                <label>
-                  <input
+                <label className="label-pos">
+                  <input className="checkbox-pos"
                     type="checkbox"
                     checked={permissions.write}
                     onChange={() => setPermissions({ ...permissions, write: !permissions.write })}
                   />
                   Write
                 </label>
-                <label>
-                  <input
+                <label className="label-pos">
+                  <input className="checkbox-pos"
                     type="checkbox"
                     checked={permissions.delete}
                     onChange={() => setPermissions({ ...permissions, delete: !permissions.delete })}

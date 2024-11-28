@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import PropTypes from 'prop-types';
+import './role.css';
 
 const RoleList = ({ roles, handleEditRole, handleDeleteRole }) => {
   return (
@@ -8,14 +9,16 @@ const RoleList = ({ roles, handleEditRole, handleDeleteRole }) => {
       <table className="table table-bordered mt-4">
         <thead>
           <tr>
+            <th>S. No</th>
             <th>Role Name</th>
             <th>Permissions</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody>
-          {roles.map(role => (
+          {roles.map((role,index) => (
             <tr key={role.id}>
+              <td>{index+1}</td>
               <td>{role.name}</td>
               <td>
               {
@@ -26,10 +29,10 @@ const RoleList = ({ roles, handleEditRole, handleDeleteRole }) => {
               }
               </td>
               <td>
-                <button onClick={() => handleEditRole(role)} className="btn btn-warning btn-sm">
+                <button onClick={() => handleEditRole(role)} className="btn-list btn-warning btn-sm">
                   Edit
                 </button>
-                <button onClick={() => handleDeleteRole(role.id)} className="btn btn-danger btn-sm ml-2">
+                <button onClick={() => handleDeleteRole(role.id)} className="btn-list btn-danger btn-sm ml-2">
                   Delete
                 </button>
               </td>
