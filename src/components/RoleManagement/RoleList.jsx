@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 const RoleList = ({ roles, handleEditRole, handleDeleteRole }) => {
   return (
     <div>
-      <h3>Role List</h3>
       <table className="table table-bordered mt-4">
         <thead>
           <tr>

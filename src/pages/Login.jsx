@@ -27,8 +27,10 @@ const Login = ({ onLogin }) => {
 
   return (
     <div className="login-page">
-        <img className="logo" src={logo} alt="vrv-logo"/>
-        <h1>Global leader in Cybersecurity</h1>
+        <div className="logo-container">
+            <img className="logo" src={logo} alt="vrv-logo"/>
+            <h1 className="login-container-h1">Global leader in <br/>Cyber-security</h1>
+        </div>
       <div className="login-container">
         <h2>Login</h2>
         <form onSubmit={handleLogin}>

@@ -1,0 +1,72 @@
+.topHead {
+    display: flex;
+    background-color: white;
+    width: 100vw;
+    border-bottom: 2px solid black;
+}
+
+.btn-logout {
+    height: 50px;
+    width: 75px;
+    margin: auto 15px;
+    border-radius: 20%;
+    background-color: rgb(18, 82, 120);
+    font-weight: bold;
+    color: white;
+    transition: background-color 300ms;
+}
+
+.btn-logout:hover {
+    background-color: rgb(199, 45, 21);
+    transition: background-color 300ms;
+}
+
+.container-dashboard {
+    margin: 0;
+    height: 100vh;
+    background-color: #407972;
+}
+
+.logo-dash {
+    width: 150px;
+    height: 75px;
+  }
+
+.topHead h1 {
+    font-size: 40px;
+    text-align: center;
+    margin: auto;
+}
+
+.data-display {
+    padding: 50px;
+}
+
+.user-list-header {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    padding: 7px;
+}
+
+.add-user-btn {
+    margin: auto 10px;
+    height: 40px;
+    width: 100px;
+    border-radius: 50px;
+    border: 1px solid rgb(13, 29, 60);
+    background-color: rgb(18, 72, 120);
+    transition: background-color 300ms;
+    color: white;
+}
+
+.add-user-btn:hover {
+    background-color: rgb(47, 132, 89);
+    transition: background-color 300ms;
+}
+
+.user-list-header h3 {
+    color: white;
+    font-size: 40px;
+    margin: auto 10px;
+}

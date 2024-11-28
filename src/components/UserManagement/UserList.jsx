@@ -29,7 +29,6 @@ const UserList = ({ users, currentUser={}, handleEditUser, handleDeleteUser }) =
       {/* <button className="btn btn-primary mb-3" onClick={handleAddUser}>
         Add User
       </button> */}
-      <h3>User List</h3>
       <table className="table table-bordered mt-4">
         <thead>
           <tr>
